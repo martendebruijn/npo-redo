@@ -1,0 +1,164 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  background-color: #1e1e1e;
+  color: white;
+}
+a {
+  color: white;
+}
+img {
+  max-width: 100%;
+}
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+  z-index: 2;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  padding: 15px;
+}
+nav a {
+  font-size: 20px;
+}
+.nav-item-icon {
+  display: flex;
+  align-items: center;
+}
+.closed {
+  display: none;
+}
+.npo-logo {
+  width: 100px;
+}
+h1 {
+  font-size: 56px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+p.spotlight {
+  font-size: 22px;
+  max-width: 865px;
+}
+.spotlight-container {
+  width: 100%;
+}
+.header-fallback {
+  background-image: url('https://images.npo.nl/header/2560x1440/kamp-van-koningsbrugge-dai-jeroen-ray_cdn_header-1603987441.jpg');
+  width: 100%;
+  height: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-fallback-container {
+  /* @media (min-width: 1500px) */
+  max-width: 1500px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: contain;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  opacity: 0.9;
+}
+/* gray overlay */
+.header-fallback-container:after {
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(30, 30, 30, 0.2);
+}
+.spotlight-meta {
+  position: relative;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  padding-top: 13em;
+}
+.button-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+.btn {
+  border: 1px solid transparent;
+  margin: 0;
+  outline: none;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  font-weight: 400;
+  white-space: nowrap;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  height: 52px;
+  line-height: 1 !important;
+  background-color: #ff6d00;
+  /* @media (min-width: 1500px) */
+  font-size: 20px;
+  padding: 0 20px;
+  border-radius: 6px;
+}
+main {
+  z-index: 2;
+  position: relative;
+}
+.container,
+.spotlight-meta {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
+hr {
+  position: relative;
+  z-index: 2;
+  border: 1px solid #4f5051;
+}
+header {
+  height: 600px;
+}
+.lane-items {
+  display: flex;
+}
+.lane h2 {
+  font-weight: 700;
+  font-size: 24px;
+  padding: 15px 0;
+}
+.lane-items-card-title {
+  padding-top: 15px;
+}
+.lane-items-card {
+  padding: 0 30px 30px 0;
+}
