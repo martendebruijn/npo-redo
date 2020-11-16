@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <nav aria-labelledby="mainmenulabel">
+        <nav class="main-nav" aria-labelledby="mainmenulabel">
             <h2 id="mainmenulabel" class="sr-only">Hoofd menu</h2>
             <ul>
                 <li><a href="/" aria-current="page"><img class="npo-logo" src="img/npo-start.svg" alt="Startpagina"></a></li>
@@ -36,30 +36,34 @@
             </ul>
         </nav>
     </div>
-    <header>
+    <header aria-label="Aanbevolen video">
+        <a class="no-visual-link" href="#kamp-van-koningsbrugge-hoogtevrees" aria-hidden="true">
             <div class="spotlight-container">
                 <div class="header-fallback-container">
                     <div class="header-fallback"></div>
                 </div>
                 <div class="spotlight-meta">
-                    <h1>Kamp Van Konningsbrugge<span class="sr-only">:</span> <span aria-hidden="true">|</span> Hoogtevrees</h1>
+                    <a href="#kamp-van-koningsbrugge-hoogtevrees" class="no-visual-link" aria-labelledby="spotlight-title">
+                        <h1 id="spotlight-title">Kamp Van Konningsbrugge<span class="sr-only">:</span> <span aria-hidden="true">|</span> Hoogtevrees</h1>
+                    </a>
                     <p class="spotlight">De cursisten wagen een sprong in het diepe en moeten hun angst zien te bedwingen op een twintig meter hoge toren.</p>
                     <div class="button-box">
-                       <a class="btn" href="#nukijken"><span class="material-icons" aria-hidden="true"> play_arrow </span>Nu kijken</a>
+                       <span class="btn"><span class="material-icons" aria-hidden="true"> play_arrow </span>Nu kijken</span>
                        <ul>
-                           <li><a href="#avrotros"><img src="https://www-assets.npo.nl/uploads/broadcaster/45/logo/LOGO_OMROEP_AVROTROS_groot.png" alt="AVROTROS"></a></li>
+                           <li><a href="#avrotros"><img src="https://www-assets.npo.nl/uploads/broadcaster/45/logo/LOGO_OMROEP_AVROTROS_groot.png" alt="Logo omroep AVROTROS, link naar de website van de AVROTROS"></a></li>
                        </ul>
                     </div>
                 </div>
             </div>
+        </a>
     </header>
     <div class="container">
         <hr>
     </div>
     <main>
         <div class="container">
-            <div class="lane">
-                <div class="lane-title"><a tabindex="0" href="#nieuws-en-actualiteiten"><h2>Nieuws & actualiteiten</h2></a></div>
+            <section class="lane" aria-labelledby="section-news-label">
+                <div class="lane-title"><a tabindex="0" href="#nieuws-en-actualiteiten"><h2 id="section-news-label">Nieuws & actualiteiten</h2></a></div>
                 <div class="lane-items">
                     <div class="lane-items-card">
                         <!--! tabindex="-1" dynamisch inladen via script, zodat deze wel te focussen zijn wanneer JS niet wordt ingeladen  -->
@@ -71,34 +75,36 @@
                     </div>
                     <div class="lane-items-card">
                         <a tabindex="-1" href="#nos-journaal">
-                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
-                            <div class="lane-items-card-title">NOS Journaal</div>
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/Goedemorgen_Nederland_cdn_tile-1587131250.jpg" alt=""></div>
+                            <div class="lane-items-card-title">Goedemorgen Nederland</div>
                         </a>
                     </div>
                     <div class="lane-items-card">
                         <a tabindex="-1" href="#nos-journaal">
-                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
-                            <div class="lane-items-card-title">NOS Journaal</div>
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nieuwsuur_cdn_tile-1601359713.jpg" alt=""></div>
+                            <div class="lane-items-card-title">Nieuwsuur</div>
                         </a>
                     </div>
                     <div class="lane-items-card">
                         <a tabindex="-1" href="#nos-journaal">
-                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
-                            <div class="lane-items-card-title">NOS Journaal</div>
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/1319146.jpg" alt=""></div>
+                            <div class="lane-items-card-title">NOS Studio Voetbal</div>
                         </a>
                     </div>
                     <div class="lane-items-card">
-                        <a tabindex="-1" href="#nos-journaal">
+                        <a tabindex="-1" href="#nos-journaal" aria-hidden="true">
                             <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
                             <div class="lane-items-card-title">NOS Journaal</div>
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="lane">
-                <div class="lane-title"><a tabindex="0" href="#nieuws-en-actualiteiten"><h2>Nieuws & actualiteiten</h2></a></div>
+            </section>
+            <section class="lane" aria-labelledby="section-gemist-label">
+                <div class="lane-title"><a tabindex="0" href="#nieuws-en-actualiteiten"><h2 id="section-gemist-label">Gemist</h2></a></div>
                 <div class="lane-items">
                     <div class="lane-items-card">
+                        <!--! tabindex="-1" dynamisch inladen via script, zodat deze wel te focussen zijn wanneer JS niet wordt ingeladen  -->
+                        <!-- todo: see source: https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex -->
                         <a tabindex="-1" href="#nos-journaal">
                             <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
                             <div class="lane-items-card-title">NOS Journaal</div>
@@ -106,34 +112,36 @@
                     </div>
                     <div class="lane-items-card">
                         <a tabindex="-1" href="#nos-journaal">
-                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
-                            <div class="lane-items-card-title">NOS Journaal</div>
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/Goedemorgen_Nederland_cdn_tile-1587131250.jpg" alt=""></div>
+                            <div class="lane-items-card-title">Goedemorgen Nederland</div>
                         </a>
                     </div>
                     <div class="lane-items-card">
                         <a tabindex="-1" href="#nos-journaal">
-                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
-                            <div class="lane-items-card-title">NOS Journaal</div>
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nieuwsuur_cdn_tile-1601359713.jpg" alt=""></div>
+                            <div class="lane-items-card-title">Nieuwsuur</div>
                         </a>
                     </div>
                     <div class="lane-items-card">
                         <a tabindex="-1" href="#nos-journaal">
-                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
-                            <div class="lane-items-card-title">NOS Journaal</div>
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/1319146.jpg" alt=""></div>
+                            <div class="lane-items-card-title">NOS Studio Voetbal</div>
                         </a>
                     </div>
                     <div class="lane-items-card">
-                        <a tabindex="-1" href="#nos-journaal">
+                        <a tabindex="-1" href="#nos-journaal" aria-hidden="true">
                             <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
                             <div class="lane-items-card-title">NOS Journaal</div>
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="lane">
-                <div class="lane-title"><a tabindex="0" href="#nieuws-en-actualiteiten"><h2>Nieuws & actualiteiten</h2></a></div>
+            </section>
+            <section class="lane" aria-labelledby="section-new-label">
+                <div class="lane-title"><a tabindex="0" href="#nieuws-en-actualiteiten"><h2 id="section-new-label">Nieuwe programma's en seizoenen</h2></a></div>
                 <div class="lane-items">
                     <div class="lane-items-card">
+                        <!--! tabindex="-1" dynamisch inladen via script, zodat deze wel te focussen zijn wanneer JS niet wordt ingeladen  -->
+                        <!-- todo: see source: https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex -->
                         <a tabindex="-1" href="#nos-journaal">
                             <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
                             <div class="lane-items-card-title">NOS Journaal</div>
@@ -141,33 +149,147 @@
                     </div>
                     <div class="lane-items-card">
                         <a tabindex="-1" href="#nos-journaal">
-                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
-                            <div class="lane-items-card-title">NOS Journaal</div>
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/Goedemorgen_Nederland_cdn_tile-1587131250.jpg" alt=""></div>
+                            <div class="lane-items-card-title">Goedemorgen Nederland</div>
                         </a>
                     </div>
                     <div class="lane-items-card">
                         <a tabindex="-1" href="#nos-journaal">
-                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
-                            <div class="lane-items-card-title">NOS Journaal</div>
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nieuwsuur_cdn_tile-1601359713.jpg" alt=""></div>
+                            <div class="lane-items-card-title">Nieuwsuur</div>
                         </a>
                     </div>
                     <div class="lane-items-card">
                         <a tabindex="-1" href="#nos-journaal">
-                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
-                            <div class="lane-items-card-title">NOS Journaal</div>
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/1319146.jpg" alt=""></div>
+                            <div class="lane-items-card-title">NOS Studio Voetbal</div>
                         </a>
                     </div>
                     <div class="lane-items-card">
-                        <a tabindex="-1" href="#nos-journaal">
+                        <a tabindex="-1" href="#nos-journaal" aria-hidden="true">
                             <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
                             <div class="lane-items-card-title">NOS Journaal</div>
                         </a>
                     </div>
                 </div>
-            </div>
+            </section>
+            <section aria-labelledby="section-corona-label" class="lane">
+                <div class="lane-title"><a tabindex="0" href="#nieuws-en-actualiteiten"><h2 id="section-corona-label">Corona</h2></a></div>
+                <div class="lane-items">
+                    <div class="lane-items-card">
+                        <!--! tabindex="-1" dynamisch inladen via script, zodat deze wel te focussen zijn wanneer JS niet wordt ingeladen  -->
+                        <!-- todo: see source: https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex -->
+                        <a tabindex="-1" href="#nos-journaal">
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
+                            <div class="lane-items-card-title">NOS Journaal</div>
+                        </a>
+                    </div>
+                    <div class="lane-items-card">
+                        <a tabindex="-1" href="#nos-journaal">
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/Goedemorgen_Nederland_cdn_tile-1587131250.jpg" alt=""></div>
+                            <div class="lane-items-card-title">Goedemorgen Nederland</div>
+                        </a>
+                    </div>
+                    <div class="lane-items-card">
+                        <a tabindex="-1" href="#nos-journaal">
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nieuwsuur_cdn_tile-1601359713.jpg" alt=""></div>
+                            <div class="lane-items-card-title">Nieuwsuur</div>
+                        </a>
+                    </div>
+                    <div class="lane-items-card">
+                        <a tabindex="-1" href="#nos-journaal">
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/1319146.jpg" alt=""></div>
+                            <div class="lane-items-card-title">NOS Studio Voetbal</div>
+                        </a>
+                    </div>
+                    <div class="lane-items-card">
+                        <a tabindex="-1" href="#nos-journaal" aria-hidden="true">
+                            <div class="lane-items-card-banner"><img src="https://images.npo.nl/tile/320x180/nos_journaal_cdn_tile-1593068776.jpg" alt=""></div>
+                            <div class="lane-items-card-title">NOS Journaal</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
-    <footer></footer>
-    <script src="main.js"></script>
+    <footer>
+        <div class="container">
+            <div class="top-section-footer">
+                <div class="footer-omroepen">
+                    <nav aria-labelledby="nav-omroepen-label">
+                        <h5 id="nav-omroepen-label">Omroepen</h5>
+                        <ul>
+                                <li><a href="#omroepen">AVROTROS</a></li>
+                                <li><a href="#omroepen">BNNVARA</a></li>
+                                <li><a href="#omroepen">EO</a></li>
+                                <li><a href="#omroepen">Human</a></li>
+                                <li><a href="#omroepen">KRO-NCRV</a></li>
+                                <li><a href="#omroepen">MAX</a></li>
+                                <li><a href="#omroepen">NOS</a></li>
+                                <li><a href="#omroepen">NTR</a></li>
+                                <li><a href="#omroepen">PowNed</a></li>
+                                <li><a href="#omroepen">VPRO</a></li>
+                                <li><a href="#omroepen">WNL</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-organisatie">
+                    <nav aria-labelledby="nav-organisatie-label">
+                        <h5 id="nav-organisatie-label">Organisatie</h5>
+                        <ul>
+                            <li><a href="#organisatie">Over NPO</a></li>
+                            <li><a href="#organisatie">Werken bij NPO</a></li>
+                            <li><a href="#organisatie">Pers</a></li>
+                            <li><a href="#organisatie">Vraag en atwoord</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-overig">
+                    <nav aria-labelledby="nav-ook-npo-label">
+                        <h5 id="nav-ook-npo-label">Ook NPO</h5>
+                        <ul>
+                            <li><a href="ook-npo">Zappelin</a></li>
+                            <li><a href="ook-npo">Zapp</a></li>
+                            <li><a href="ook-npo">NPO 3</a></li>
+                            <li><a href="ook-npo">BVN</a></li>
+                            <li><a href="ook-npo">NPO extra</a></li>
+                            <li><a href="ook-npo">NPO Campus</a></li>
+                            <li><a href="ook-npo">NPO Focus</a></li>
+                            <li><a href="ook-npo">NPO-fonds</a></li>
+                            <li><a href="ook-npo">Ombudsman</a></li>
+                            <li><a href="ook-npo">Net in Nederland</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-socials">
+                    <nav aria-labelledby="nav-socials-label">
+                        <h5 id="nav-socials-label">Volg de NPO</h5>
+                        <ul>
+                            <li><a href="#volg-de-npo">iPad & iPhone</a></li>
+                            <li><a href="#volg-de-npo">Android</a></li>
+                            <li><a href="#volg-de-npo">Instagram</a></li>
+                            <li><a href="#volg-de-npo">Facebook</a></li>
+                            <li><a href="#volg-de-npo">Nieuwsbrief</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="bottom-section-footer">
+                <nav aria-label="NPO voorwaarden en beleidsvormen">
+                    <ul>
+                        <li><a href="#algemene-voorwaarden-en-privacy">Algemene voorwaarden & Privacy</a></li>
+                        <li><a href="#npo-id-gebruikersvoorwaarden">NPO id Gebruikersvoorwaarden</a></li>
+                        <li><a href="#npo-plus-gebruikersvoorwaarden">NPO Plus Gebruikersvoorwaarden</a></li>
+                        <li><a href="#cookiebeleid">Cookiebeleid</a></li>
+                        <li><a href="#adverteren">Informatie over adverteren</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#npo"><img src="https://www.npostart.nl/images/npo_logo_40x40.png" alt="Logo NPO, link naar startpagina NPO start"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+<script src="main.js"></script>
 </body>
 </html>

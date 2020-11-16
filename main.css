@@ -18,7 +18,7 @@ img {
   height: 1px;
   overflow: hidden;
 }
-nav {
+nav.main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,14 +26,14 @@ nav {
   position: relative;
   z-index: 2;
 }
-nav ul {
+nav.main-nav ul {
   display: flex;
   align-items: center;
 }
-nav ul li {
+nav.main-nav ul li {
   padding: 15px;
 }
-nav a {
+nav.main-nav a {
   font-size: 20px;
 }
 .nav-item-icon {
@@ -161,4 +161,35 @@ header {
 }
 .lane-items-card {
   padding: 0 30px 30px 0;
+}
+.no-visual-link {
+  text-decoration: none;
+}
+.top-section-footer {
+  display: flex;
+  justify-content: space-between;
+}
+h5 {
+  font-size: 24px;
+  font-weight: 500;
+}
+footer a {
+  color: #999;
+  font-size: 18px;
+}
+.bottom-section-footer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 45px;
+}
+.bottom-section-footer ul:first-child {
+  display: flex;
+}
+.bottom-section-footer ul:first-child li {
+  padding-right: 30px;
+}
+footer {
+  padding-bottom: 45px;
+  padding-top: 100px;
 }
