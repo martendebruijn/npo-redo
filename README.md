@@ -42,6 +42,7 @@ Om een pagina structuur te geven, kan men gebruik maken van verschillende HTML5 
 
 <details>
 <summary>Structuurherontwerp NPO Start</summary>
+
 ```html
 <!-- Structuur NPO Start -->
 <nav></nav>
@@ -60,10 +61,12 @@ Om een pagina structuur te geven, kan men gebruik maken van verschillende HTML5 
 	<nav></nav>
 </footer>
 ```
+
 </details>
 
 <details>
 <summary>Voorbeeld navigatie element met label</summary>
+
 ```html
 <!-- Structuur NPO Start -->
 <nav></nav>
@@ -86,6 +89,7 @@ Om een pagina structuur te geven, kan men gebruik maken van verschillende HTML5 
 
 <details>
 <summary>Uitspraak elementen door VO</summary>
+
 | Element | Uitspraak                |
 | ------- | ------------------------ |
 | `<nav>`  | navigatie               |
@@ -93,6 +97,7 @@ Om een pagina structuur te geven, kan men gebruik maken van verschillende HTML5 
 | `<main>`  | hoofdgedeelte          |
 | `<section>`  | segment             |
 | `<footer>`  | inhoudsinformatie    |
+
 </details>
 <details>
 <summary>Huidige NPO Start oriëntatiepunten</summary>
