@@ -101,11 +101,13 @@ Om een pagina structuur te geven, kan men gebruik maken van verschillende HTML5 
 </details>
 <details>
 <summary>Huidige NPO Start oriëntatiepunten</summary>
-...
+
+video
 </details>
 <details>
 <summary>Herontwerp oriëntatiepunten</summary>
-...
+
+video
 </details>
 
 ### Speciaal voor schermlezers
@@ -113,45 +115,111 @@ Als website maker ben je in staat (instaat?) om elementen/informatie te verstopp
 #### Alleen voor schermlezers
 <details>
 <summary>De code</summary>
-...
+
+Dankzij de `.sr-only` klas wordt elk element met deze klasse visueel verborgen. Een schermlezer leest dit wel op. Hierdoor kan men nuttige informatie meegeven aan een schermlezer, maar deze niet visueel zichtbaar te hebben.
+
+Hieronder kan men zien dat het hoofd menu label meekrijgt die niet visueel zichtbaar is. Ook zijn aan een aantal menu items extra informatie geplakt, zodat dit fijner en logischer wordt opgelezen door de schermlezer.
+
+De link "live" is visueel gezien slechts "live". Hiervoor heb ik "Kijk NPO" gezet en deze visueel verstopt. Hierdoor wordt niet alleen "live" opgelezen, maar hoort de gebruiker "Kijk NPO Live".
+
+```html
+<nav aria-labelledby="mainmenulabel">
+	<h2 id="mainmenulabel" class="sr-only">Hoofd menu</h2>
+	<ul>
+		...
+		<li><a href="#live"><span class="sr-only">Kijk NPO </span>Live</a></li>
+    <li><a href="#programmas"><span class="sr-only">Bekijk alle </span>Programma's</a></li>
+    ...
+   </ul>
+```
+
+```css
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+/* Source: WAI [needs link] */
+```
 </details>
 <details>
 <summary>Huidige NPO Start navigatie</summary>
-...
+
+video
 </details>
 <details>
 <summary>NPO herontwerp</summary>
-...
+
+video
 </details>
 
 #### Juist niet voor schermlezers
 <details>
 <summary>De code</summary>
-...
+
+Voor de iconen heb ik gebruik gemaakt van een iconen font van Google. Door `aria-hidden="true"` toe te voegen wordt er voorkomen dat de schermlezer het woord "search" uitspreekt.
+
+```html
+<a href="#">
+	<span class="material-icons" aria-hidden="true"> search </span>Zoeken
+</a>
+```
+
 </details>
 
 ### Zoeken op NPO Start
 <details>
 <summary>'Normaal' zoeken (visueel)</summary>
-...
+
+video
 </details>
 <details>
 <summary>Hoe dit werkt met VO:</summary>
-...
+
+Als de gebruiker naar het zoeken element navigeert, hoort de gebruiker geen enkele indicator dat hij of zij iets met dit element kan doen. Mocht de gebruiker dit toevallig weten of kunnen zien, kan hij d.m.v. een sneltoets van VO het element openen. 
+
+Het input-element is vervolgens niet meer te sluiten via het toetsenbord en als men zoekt dan worden de verschenen zoekresultaten niet opgelezen. 
+
+De zoekresultaten zijn te bereiken met de linker en rechter pijltjestoetsen `<-` `->` . Logischer zou zijn dat de gebruiker dit kan door middel van de omhoog en naar bedenen pijltjestoetsen. Met de linker en rechter pijltjestoetsen zou de gebruiker naar het volgende element in het menu moeten navigeren.
+
+video
 </details>
 <details>
 <summary>Hoe het beter kan:</summary>
-...
+
+D.m.v. WAI-ARIA kunnen we aangeven dat het menu-item een pop-up heeft en dat deze geopend is of niet. Deze informatie zal de schermlezer vervolgens doorgeven aan de gebruiker.
+
+```html
+<a href="#" aria-haspopup="true" aria-expanded="false">...</a>
+```
+
+video
+
 </details>
 
 ### Omroep link(s)
 <details>
 <summary>Huidige NPO Start</summary>
-...
+
+video
 </details>
 <details>
 <summary>NPO herontwerp</summary>
-...
+
+video
+
+<br>
+
+Door de afbeeldingen van desbetreffende omroep(en) een korte beschrijving te geven, wordt deze beschrijving voorgelezen aan de gebruiker ipv. de bestemmings-url. Omdat het hier om een link gaat, is het belangrijk om aan te geven waar deze link naar toe gaat. 
+
+```html
+<a href="#avrotros">
+	<img src="..." alt="Logo omroep AVROTROS, link naar de website van de AVROTROS"></a>
+```
+
 </details>
 
 ### Groepering voor snellere navigatie
@@ -186,17 +254,24 @@ Op de huidige manier komt alles onder elkaar te staan en moet een gebruiker door
 
 <details>
 <summary>Huidig, geen groepering</summary>
-...
+
+video
 </details>
 
 <details>
 <summary>Herontwerp, wel groepering</summary>
-...
+
+video
 </details>
 
 <details>
 <summary>Herontwerp, wel groepering, secties in oriëntatiepunten</summary>
-...
+
+Doordat we de verschillende thema's in `<section>` elementen (met label) hebben gezet, kan de gebruiker ook de verschillende thema's bereiken door middel van te navigeren over de oriëntatie punten.
+<br>
+
+*insert video*
+<br>
 </details>
 
 ## Credits
